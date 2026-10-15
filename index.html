@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17251f">
+  <title>AR Menu Kantin Beranda</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">KANTIN BERANDA</p>
+      <h1>AR Menu 2D</h1>
+    </div>
+    <span class="status" id="status">Siap</span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Lihat menu di meja kamu</h2>
+      <p>Pilih desain menu, mulai AR, arahkan kamera ke meja,
+      lalu ketuk layar untuk meletakkan gambar.</p>
+    </section>
+
+    <section class="panel">
+      <label for="menuFile">Pilih gambar menu PNG/JPG</label>
+      <input id="menuFile" type="file"
+             accept="image/png,image/jpeg">
+
+      <img id="preview" src="./assets/menu-burger.png"
+           alt="Pratinjau menu">
+
+      <button id="startAR" class="primary">
+        Mulai Augmented Reality
+      </button>
+
+      <button id="placeAgain" disabled>
+        Letakkan menu lagi
+      </button>
+
+      <button id="reset" class="secondary" disabled>
+        Hapus menu yang diletakkan
+      </button>
+
+      <p id="message" role="status">
+        Pilih gambar, lalu mulai AR.
+      </p>
+    </section>
+  </main>
+
+  <div id="arHint" hidden>
+    Gerakkan HP perlahan ke arah meja.
+    Ketuk layar untuk meletakkan menu.
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
